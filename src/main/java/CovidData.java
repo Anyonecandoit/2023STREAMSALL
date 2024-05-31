@@ -225,6 +225,11 @@ public class CovidData {
         covidData.setPopulation(population);
         return covidData;
     }
+
+	public void setOther(int parseIntValue) {
+		// TODO Auto-generated method stub
+		
+	}
     
     
 }

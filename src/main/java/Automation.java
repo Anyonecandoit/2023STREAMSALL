@@ -25,11 +25,11 @@ public class Automation {
 
 		        // Extract and print table headings
 		        List<WebElement> headingElements = driver.findElements(By.xpath("/html/body/div[3]/div[3]/div/div[7]/div[1]/div/table/thead/tr/th"));
-		        List<String> headings = headingElements.stream().map(WebElement::getText).collect(Collectors.toList());
+		     //   List<String> headings = headingElements.stream().map(WebElement::getText).collect(Collectors.toList());
 
 		        // Join the headings into a single line without line breaks and add square brackets
-		        String headingsString = "[" + String.join(", ", headings).replaceAll("\\r?\\n", "") + "]";
-		        System.out.println("Headings: " + headingsString);
+		      //  String headingsString = "[" + String.join(", ", headings).replaceAll("\\r?\\n", "") + "]";
+		   //     System.out.println("Headings: " + headingsString);
 
 		        
 		        System.out.println("getting row list");
@@ -37,23 +37,23 @@ public class Automation {
 		        List<WebElement> rowElements = driver.findElements(By.xpath("//table[@id='main_table_countries_today']/tbody/tr[8]"));
 
 		        System.out.println( "got and using lambda getting data");
-		        List<Map<String, String>> data = rowElements.stream().map(row -> {
-		            List<WebElement> cellElements = row.findElements(By.tagName("td"));
-		            Map<String, String> rowData = new HashMap<>();
-		            for (int i = 0; i < headings.size(); i++) {
-		                rowData.put(headings.get(i), cellElements.get(i).getText());
-		            }
-		            return rowData;
-		        }).collect(Collectors.toList());
+//		        List<Map<String, String>> data = rowElements.stream().map(row -> {
+//		            List<WebElement> cellElements = row.findElements(By.tagName("td"));
+//		            Map<String, String> rowData = new HashMap<>();
+//		            for (int i = 0; i < headings.size(); i++) {
+//		                rowData.put(headings.get(i), cellElements.get(i).getText());
+//		            }
+//		            return rowData;
+//		        }).collect(Collectors.toList());
 
 		        
 		        System.out.println( "got data printing now ");
 		        // Print data
-		        String dataString = data.stream()
-		                .map(rowData -> "[" + String.join(", ", rowData.values()) + "]")
-		                .collect(Collectors.joining(", "));
-		        System.out.println("Data: " + dataString);
-		        
+//		        String dataString = data.stream()
+//		                .map(rowData -> "[" + String.join(", ", rowData.values()) + "]")
+//		                .collect(Collectors.joining(", "));
+//		        System.out.println("Data: " + dataString);
+//		        
 		  }}
 		//System.out.println("text case failed");
 
