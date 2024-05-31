@@ -7,7 +7,7 @@ public class CovidDataExample {
     public static void main(String[] args) {
         // Create a list to hold CovidData objects
         List<CovidData> data = new ArrayList<>();
-
+//....
         // Sample data for each country
         data.add(createCovidData(1, "Brazil", 38230814, 0, 708739, 8, 36249161, 0, 1272914, 0, 177526, 3291, 63776166, 296146, 215353593));
         data.add(createCovidData(2, "S. Korea", 34571873, 0, 35934, 0, 34535939, 0, 0, 0, 673523, 700, 15804065, 307892, 51329899));
